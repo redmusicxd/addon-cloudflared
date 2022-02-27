@@ -9,7 +9,7 @@
 arch=$1
 
 # Dependency releases to build from
-cloudflaredRelease="2022.2.1"
+# cloudflaredRelease="2022.2.1"
 
 # Adapt the architecture to the cloudflared specific names if needed
 # see HA Archs: https://developers.home-assistant.io/docs/add-ons/configuration/#:~:text=the%20add%2Don.-,arch,-list
@@ -33,7 +33,7 @@ case $arch in
 esac
 
 # Download the cloudflared bin
-wget -O /usr/bin/cloudflared "https://github.com/cloudflare/cloudflared/releases/download/${cloudflaredRelease}/cloudflared-linux-${arch}"
+wget -O /usr/bin/cloudflared "https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-${arch}"
 
 # Make the downloaded bin executeable
 chmod +x /usr/bin/cloudflared
